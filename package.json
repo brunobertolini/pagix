@@ -1,12 +1,12 @@
 {
   "name": "paginatex",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "license": "MIT",
   "description": "A generic pagination algorithm",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.m.js",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "files": [
     "dist/",
     "package.json",
