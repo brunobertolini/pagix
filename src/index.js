@@ -1,7 +1,16 @@
 export const between = (num, min, max) => Math.max(min, Math.min(num, max))
 
-export const range = (start, end) =>
-	Array.from(new Array(end - start), (val, index) => start + index)
+export const range = (from, to) => {
+	const result = []
+	let n = from
+
+	while (n < to) {
+		result.push(n)
+		n += 1
+	}
+
+	return result
+}
 
 export const paginatex = (
 	records,
