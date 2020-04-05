@@ -12,6 +12,14 @@
 		"package.json",
 		"README.md"
 	],
+	"keywords": [
+		"pagination",
+		"pages",
+		"paginate",
+		"pages calc",
+		"pagination calculate",
+		"pagination calc"
+	],
 	"author": {
 		"name": "Bruno Bertolini",
 		"email": "dev@brunobertolini.com",
