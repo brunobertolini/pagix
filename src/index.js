@@ -12,13 +12,13 @@ export const range = (from, to) => {
 	return result
 }
 
-export const paginatex = (
+export const pagix = ({
 	records,
 	limit = 10,
 	current = 1,
 	delta = 1,
-	fixed = 1
-) => {
+	fixed = 1,
+}) => {
 	const total = Math.ceil(Math.max(1, records / limit))
 	const page = between(current, 1, total)
 
@@ -34,10 +34,11 @@ export const paginatex = (
 	const missLeft = left - fixed
 	const missRight = total - fixed - right + 1
 
-	const prev = missLeft > 2
-	const next = missRight > 2
+	const hasPrev = missLeft > 2
+	const hasNext = missRight > 2
 
 	const start = range(1, between(fixed + 1, 1, total + 1))
+
 	const middle = range(
 		missLeft === 2 ? left - 1 : left,
 		missRight === 2 ? right + 2 : right + 1
@@ -47,7 +48,20 @@ export const paginatex = (
 	const from = between(limit * page - limit + 1, 1, records)
 	const to = between(limit * page, 1, records)
 
-	return { total, current: page, start, end, prev, next, middle, from, to }
+	const prev = hasPrev && between(page - 1 - delta * 2, 1, total)
+	const next = hasNext && between(page + 1 + delta * 2, 1, total)
+
+	return {
+		total,
+		current: page,
+		start,
+		middle,
+		end,
+		next,
+		prev,
+		from,
+		to,
+	}
 }
 
 export default paginatex
