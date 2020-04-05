@@ -64,4 +64,4 @@ export const pagix = ({
 	}
 }
 
-export default paginatex
+export default pagix
