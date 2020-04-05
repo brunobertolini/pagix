@@ -36,9 +36,7 @@ The `pagix` function returns an object with some calculated props:
 
 **pagix({ records [, limit, current, delta, fixed ] })**: Main method to calculate pagination
 
-<div align="center">
-  <img src="/pagination.png" alt="Pagination with pagix" />
-</div>
+<img src="/pagination.png" alt="Pagination with pagix" />
 
 | Prop    | Required | Default | Description                                                     |
 | ------- | -------- | ------- | --------------------------------------------------------------- |
