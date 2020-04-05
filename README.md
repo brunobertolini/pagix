@@ -34,11 +34,11 @@ The `pagix` function returns an object with some calculated props:
 
 ## API
 
+**pagix({ records [, limit, current, delta, fixed ] })**: Main method to calculate pagination
+
 <div align="center">
   <img src="/pagination.png" alt="Pagination with pagix" />
 </div>
-
-**pagix({ records [, limit, current, delta, fixed ] })**: Main method to calculate pagination
 
 | Prop    | Required | Default | Description                                                     |
 | ------- | -------- | ------- | --------------------------------------------------------------- |
