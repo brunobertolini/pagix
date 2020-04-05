@@ -38,11 +38,11 @@ The `pagix` function returns an object with some calculated props:
 - **from**: initial record from current pagination
 - **to**: last record from current pagination
 
+![pagination explain](./pagination.png)
+
 ## API
 
 **pagix({ records [, limit, current, delta, fixed ] })**: Main method to calculate pagination
-
-![pagination explain](./pagination.png)
 
 | Prop    | Required | Default | Description                                                     |
 | ------- | -------- | ------- | --------------------------------------------------------------- |
