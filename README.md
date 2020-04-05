@@ -4,6 +4,12 @@
 
 > A generic, framework agnostic, pagination calculator
 
+## Highlights
+
+- :electric_plug: Framework agnostic
+- :trophy: Dependency free
+- :fire: Higly flexible
+
 ### ✨ [Demo](https://codesandbox.io/s/4265rwmzlx)
 
 ## Install
