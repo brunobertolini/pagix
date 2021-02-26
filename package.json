@@ -9,9 +9,11 @@
 	"source": "src/index.js",
 	"files": [
 		"dist/",
+		"index.d.ts",
 		"package.json",
 		"README.md"
 	],
+	"types": "index.d.ts",
 	"keywords": [
 		"pagination",
 		"pages",
@@ -36,6 +38,8 @@
 		"lib:build": "microbundle build --target browser --name pagix",
 		"lib:release": "standard-version --no-verify",
 		"build": "yarn lib:build",
+		"test": "jest",
+		"test:watch": "jest --watch",
 		"prepublish": "yarn build"
 	},
 	"husky": {
@@ -56,11 +60,16 @@
 		]
 	},
 	"devDependencies": {
+		"@babel/core": "7.13.1",
+		"@babel/preset-env": "7.13.5",
 		"@commitlint/cli": "^8.3.5",
 		"@commitlint/config-conventional": "^8.3.4",
 		"@semantic-release/changelog": "^5.0.1",
 		"@semantic-release/git": "^9.0.0",
+		"babel-jest": "26.6.3",
+		"fast-check": "^2.13.0",
 		"husky": "^4.2.3",
+		"jest": "^26.6.3",
 		"lint-staged": "^10.1.2",
 		"microbundle": "^0.11.0",
 		"prettier": "^2.0.2",

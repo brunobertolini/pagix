@@ -34,8 +34,8 @@ export const pagix = ({
 	const missLeft = left - fixed
 	const missRight = total - fixed - right + 1
 
-	const hasPrev = missLeft > 2
-	const hasNext = missRight > 2
+	const hasPrev = page > 1
+	const hasNext = page < total
 
 	const start = range(1, between(fixed + 1, 1, total + 1))
 
@@ -48,8 +48,8 @@ export const pagix = ({
 	const from = between(limit * page - limit + 1, 1, records)
 	const to = between(limit * page, 1, records)
 
-	const prev = hasPrev && between(page - 1 - delta * 2, 1, total)
-	const next = hasNext && between(page + 1 + delta * 2, 1, total)
+	const prev = hasPrev && between(page - 1, 1, total)
+	const next = hasNext && between(page + 1, 1, total)
 
 	return {
 		total,
