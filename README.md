@@ -28,15 +28,15 @@ const paginate = pagix({ records: 100 })
 
 The `pagix` function returns an object with some calculated props:
 
-- **total**: total pages to show in pagination
-- **current**: current page, between max and min total pages
-- **start**: an array with pages before prev button
-- **middle**: an array with pages between prev and next buttons
-- **end**: an array with pages after next button
-- **prev**: a page to set as current when click on prev button, or false
-- **next**: a page to set as current when click on next button, or false
-- **from**: initial record from current pagination
-- **to**: last record from current pagination
+- **total**: total number of pages
+- **current**: current page number, constrained between `1` and `total`
+- **start**: an array of page numbers, the first `fixed` page numbers
+- **middle**: an array of page numbers, calculated from `current` page
+- **end**: an array of page numbers, the last `fixed` page numbers
+- **prev**: the previous page number between `start` and `middle`, false if there is no truncated pages between `start` and `middle`
+- **next**: the next page number between `middle` and `end`, false if there is no truncated pages between `middle` and `end`
+- **from**: initial record in current page
+- **to**: last record in current page
 
 ![pagination explain](./pagination.png)
 

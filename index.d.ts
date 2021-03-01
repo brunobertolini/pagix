@@ -30,19 +30,19 @@ export interface PagixOptions {
 
 interface PagixReturn {
 	/**
-	 * total pages to show in pagination
+	 * total number of pages
 	 */
 	total: number;
 	/**
-	 * current page, between max and min total pages
+	 * current page number, constrained between `1` and `total`
 	 */
 	current: number;
 	/**
-	 * an array with pages before prev button
+	 * an array of page numbers, the first `fixed` page numbers
 	 */
 	start: number[];
 	/**
-	 * an array with pages between prev and next buttons
+	 * an array of page numbers, calculated from `current` page
 	 */
 	middle: number[];
 	/**
@@ -50,19 +50,21 @@ interface PagixReturn {
 	 */
 	end: number[];
 	/**
-	 * a page to set as current when click on next button, or false
+	 * the previous page number between `start` and `middle`
+	 * false if there is no truncated pages between `start` and `middle`
 	 */
 	next: number | false;
 	/**
-	 * a page to set as current when click on prev button, or false
+	 * the next page number between `middle` and `end`
+	 * false if there is no truncated pages between `middle` and `end`
 	 */
 	prev: number | false;
 	/**
-	 * initial record from current pagination
+	 * initial record in current pagination
 	 */
 	from: number;
 	/**
-	 * last record from current pagination
+	 * last record in current pagination
 	 */
 	to: number;
 }
