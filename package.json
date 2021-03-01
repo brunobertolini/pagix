@@ -9,9 +9,11 @@
 	"source": "src/index.js",
 	"files": [
 		"dist/",
+		"index.d.ts",
 		"package.json",
 		"README.md"
 	],
+	"types": "index.d.ts",
 	"keywords": [
 		"pagination",
 		"pages",
