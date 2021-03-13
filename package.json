@@ -1,6 +1,6 @@
 {
 	"name": "pagix",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "MIT",
 	"description": "A generic pagination algorithm",
 	"main": "dist/index.js",
