@@ -1,6 +1,7 @@
 {
 	"name": "pagix",
-	"version": "1.1.0",
+        "version": "1.1.0",
+        "type": "module",
 	"license": "MIT",
 	"description": "A generic pagination algorithm",
 	"main": "dist/index.js",
@@ -38,8 +39,9 @@
 		"lib:build": "microbundle build --target browser --name pagix",
 		"lib:release": "standard-version --no-verify",
 		"build": "yarn lib:build",
-		"prepublish": "yarn build"
-	},
+                "prepublish": "yarn build",
+                "test": "jest"
+        },
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged",
@@ -66,6 +68,7 @@
 		"lint-staged": "^10.1.2",
 		"microbundle": "^0.11.0",
 		"prettier": "^2.0.2",
-		"semantic-release": "^17.0.4"
-	}
+                "semantic-release": "^17.0.4",
+                "jest": "^29.7.0"
+        }
 }
